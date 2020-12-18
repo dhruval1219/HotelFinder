@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+  <!-- Linking CSS file -->
+  <link rel="stylesheet" href="HomePage.css">
+  <script src="https://kit.fontawesome.com/a076d05399.js"> </script>
+
+
+  <!-- Google Font: Spartan Medium -->
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Spartan', serif;
+      background-image: url("patrick-robert-doyle-ah8zkxqfita-unsplash@1x.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  </style>
+
+</head>
+
+<body>
+  <!-- Bar at the top -->
+  <div class="navigationBar">
+    <table class="topBar">
+      <tr>
+        <td class="barLogo"><img src="top_bar_logo.png" width='40' height='40'></td>
+        <td class="barHome"><a href="http://localhost:8080/HotelFinder/HomePage.html">HOME</a></td>
+        <td class="barContact"><a href="http://localhost:8080/HotelFinder/ContactUs/cf.php">CONTACT</a></td>
+        <td class="barAboutUs"><a href="http://localhost:8080/HotelFinder/AboutUs/AboutUs.html">ABOUT US</a></td>
+        <td class="barLogin">
+          <input type="checkbox" id="check">
+          <label for="check">
+            <img src="http://localhost:8080/HotelFinder/StaffLogin/login.png" width='40' height='40'>
+          </label>
+          <div class="sidebar">
+          <ul>
+          <li><a href="http://localhost:8080/HotelFinder/StaffLogin/staffcode.html">Staff Login</a></li>
+          </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+
+<br><br>
+
+<!-- Logo -->
+<br>
+<center><img src="centerlogo.png" width="400" height="150"></td></center>
+<br>
+
+<!-- Hotel Search -->
+<center>
+<div id="c"><br>
+
+<form action="http://localhost:8080/HotelFinder/search.php" method="POST">
+<input type="search" name="dn" placeholder="Destination" class="destinationSearch" id="autofill" required>
+<button class="useMyLocation" onclick="getLocation(); return false;"><img src="getMyLocation.png" width='28.2' height='28.2'></button>
+
+<input type="text" name="ci" placeholder="Check-In" onfocus="(this.type='date')" class='checkIn' id="b" required>
+<input type="text" name="co" placeholder="Check-Out" onfocus="(this.type='date')" class='checkOut' id="b">
+
+<br>
+<input type="number" name="ad" placeholder="Adults" class='adults' id="b">
+<input type="number" name="ch" placeholder="Children" class='children' id="b" >
+<br>
+
+<br>
+<input type="image" src="searchIcon.png" class='searchButton' width='60' height='60'>
+<br>
+</form>
+
+</div>
+
+</center>
+</body>
+
+<!-- Destination search box (Google API) -->
+<script>
+   let autocomplete;
+   function initAutocomplete(){
+     autofill = new google.maps.places.Autocomplete(
+       document.getElementById('autofill'),
+       {
+         componentRestrictions: {'country': ['US']},
+       });
+   }
+
+</script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCriS022lLuGIgSyYxOVllZt3mTaQryYsI&libraries=places&callback=initAutocomplete" async defer> </script>
+
+<!-- Use my location button (Geolocation) -->
+<script>
+  function getLocation() {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(showPosition);
+    } else {
+      alert("Geolocation is not supported by this browser");
+    }
+  }
+
+  function showPosition(position) {
+    //Create query for the API.
+    var latitude = "latitude=" + position.coords.latitude;
+    var longitude = "&longitude=" + position.coords.longitude;
+    var query = latitude + longitude + "&localityLanguage=en";
+    const Http = new XMLHttpRequest();
+    var bigdatacloud_api = "https://api.bigdatacloud.net/data/reverse-geocode-client?";
+    bigdatacloud_api += query;
+    Http.open("GET", bigdatacloud_api);
+    Http.send();
+    Http.onreadystatechange = function() {
+      if(this.readyState == 4 && this.status == 200) {
+        var myObj = JSON.parse(this.responseText);
+        console.log(myObj);
+        document.getElementById("autofill").value=myObj.postcode;
+      }
+    };
+  }
+</script>
+
+</HTML>

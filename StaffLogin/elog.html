@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+  <link rel="stylesheet" href="http://localhost:8080/HotelFinder/StaffLogin/elog.css">
+  <link rel="stylesheet" href="http://localhost:8080/HotelFinder/HomePage.css">
+  <link href="https://fonts.googleapis.com/css2?family=Spartan:wght@500&display=swap" rel="stylesheet">
+  <style>
+    .navigationBar{
+      background-image: url("http://localhost:8080/HotelFinder/patrick-robert-doyle-ah8zkxqfita-unsplash@1x.png");
+    }
+    body {
+      font-family: 'Spartan', serif;
+      background-image: url("http://localhost:8080/HotelFinder/patrick-robert-doyle-ah8zkxqfita-unsplash@1x.png");
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+    #cl{
+      color: white;
+    }
+  </style>
+</head>
+
+<body>
+  <!-- Bar at the top -->
+  <div class="navigationBar">
+    <table class="topBar">
+      <tr>
+        <td class="barLogo"><img src="http://localhost:8080/HotelFinder/top_bar_logo.png" width='40' height='40'></td>
+        <td class="barHome"><a href="http://localhost:8080/HotelFinder/HomePage.html">HOME</a></td>
+        <td class="barContact"><a href="http://localhost:8080/HotelFinder/ContactUs/cf.php">CONTACT</a></td>
+        <td class="barAboutUs"><a href="http://localhost:8080/HotelFinder/AboutUs/AboutUs.html">ABOUT US</a></td>
+        <td class="barLogin">
+          <input type="checkbox" id="check">
+          <label for="check">
+            <img src="http://localhost:8080/HotelFinder/StaffLogin/login.png" width='40' height='40'>
+          </label>
+          <div class="sidebar">
+          <ul>
+          <li><a href="http://localhost:8080/HotelFinder/StaffLogin/staffcode.html">Staff Login</a></li>
+          </ul>
+          </div>
+        </td>
+      </tr>
+    </table>
+  </div>
+
+  <div class="form-box">
+    <div class="button-box">
+      <div id="btn"></div>
+      <button type="button" class="toggle-btn" onclick="login()">Log In</button>
+      &nbsp
+      <button type="button" class="toggle-btn" onclick="register()">Register</button>
+    </div>
+
+    <form action="http://localhost:8080/HotelFinder/StaffLogin/elog.php" method="POST" id="login" class="input-group">
+      <input type="text" name="u" class="input-field" placeholder="Username" required>
+      <input type="password" name="p" class="input-field" placeholder="Password" required>
+      <br><br>
+      <input type="submit" class="submit-btn" value="Log In">
+    </form>
+    <form action="http://localhost:8080/HotelFinder/StaffLogin/create.php" method="POST" id="register" class="input-group">
+      <input type="text" name="u" class="input-field" placeholder="Username" required>
+      <input type="email" name="e" class="input-field" placeholder="Email" required>
+      <input type="password" name="p" class="input-field" placeholder="Password" required>
+      <br><br>
+      <input type="submit" class="submit-btn" value="Register">
+    </form>
+  </div>
+
+  <script>
+    var x = document.getElementById("login");
+    var y = document.getElementById("register");
+    var z = document.getElementById("btn");
+
+    function register(){
+      x.style.left = "-400px";
+      y.style.left = "35px";
+      z.style.left = "110px";
+    }
+
+    function login(){
+      x.style.left = "35px";
+      y.style.left = "450px";
+      z.style.left = "0";
+    }
+
+  </script>
+</body>
+</HTML>

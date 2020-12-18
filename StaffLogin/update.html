@@ -1,0 +1,106 @@
+<html>
+
+<head> <title> Update a Website </title> </head>
+<style>
+#jh{
+width: 300;
+height: 75;
+border: 1px solid green;
+}
+#jk{
+width: 300;
+border: 1px solid green;
+}
+#table,td,th {
+border: none;
+}
+#ds{
+width: 250:
+height: 100;
+border: 1px solid green;
+color: green;
+}
+#di{
+width: 250:
+height: 100;
+border: 1px solid red;
+color: red;
+}
+
+.bi{
+background-color: transparent;
+border: none;
+font-size: 20;
+font-family: times new roman;
+font-weight: bold;
+
+}
+</style>
+
+<script>
+function aaa(){
+	window.location="http://localhost:8080/HotelFinder/StaffLogin/loggedon.html";
+}
+</script>
+
+
+<form action="http://localhost:8080/HotelFinder/StaffLogin/update.php" method="POST">
+<center>
+<h2><button class="bi" onclick="aaa(); return false"> Update Hotel Website into the Database</button></h2>
+<table>
+<tr>
+<td>Title</td> <td><input type="textbox" id="jk" name="zz" required></td>
+</tr>
+
+<tr>
+<td>Description</td>  <td><input type="textarea" id="jh" name="xx" required></td>
+</tr>
+
+<tr>
+<td>Link </td> <td><input type="textarea" id="jh" name="bb" required></td>
+</tr>
+
+<tr>
+<td>Address</td> <td><input type="textarea" id="jh" name="mm" required></td>
+</tr>
+
+<tr>
+<td>Map</td> <td><input type="textarea" id="jh" name="ss" required></td>
+</tr>
+
+<tr>
+<td>Zip Code</td> <td><input type="textarea" id="jh" name="dn" required></td>
+</tr>
+
+<tr>
+<td>City</td> <td><input type="textarea" id="jh" name="vv" placeholder="City, State, USA" required></td>
+</tr>
+
+<tr>
+<td>Check-In Availability</td> <td><input type="date" id="jh" name="ci" placeholder= "mm/dd/yyyy" required></td>
+</tr>
+
+<tr>
+<td>Check-Out Availability</td> <td><input type="date" id="jh" name="co" placeholder= "mm/dd/yyyy" required></td>
+</tr>
+
+<tr>
+<td>Adults</td> <td><input type="number" id="jh" name="ad" required></td>
+</tr>
+
+<tr>
+<td>Children</td> <td><input type="number" id="jh" name="ch" required></td>
+</tr>
+
+<tr>
+<td>Id</td> <td><input type="textarea" id="jh" name="vc" required></td>
+</tr>
+
+</table>
+
+<input id="ds" type="submit" value="Submit">
+<input id="di" type="reset"  value="Reset">
+</center>
+
+
+</html>

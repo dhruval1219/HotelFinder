@@ -1,0 +1,115 @@
+<html>
+
+<head>
+	<title>  Add a Website </title> </head>
+<style>
+/*body {
+	font-family: 'Spartan', serif;
+	background-image: url("patrick-robert-doyle-ah8zkxqfita-unsplash@1x.png");
+	background-size: cover;
+	background-repeat: no-repeat;
+}*/
+#jh{
+width: 300;
+height: 75;
+border: 1px solid green;
+}
+#jk{
+width: 300;
+border: 1px solid green;
+}
+#table,td,th {
+border: none;
+}
+#ds{
+width: 250:
+height: 100;
+border: 1px solid green;
+color: green;
+}
+#di{
+width: 250:
+height: 100;
+border: 1px solid red;
+color: red;
+}
+
+.bi{
+background-color: transparent;
+border: none;
+font-size: 20;
+font-family: times new roman;
+font-weight: bold;
+
+}
+</style>
+
+<script>
+
+function aaa(){
+	window.location="http://localhost:8080/HotelFinder/StaffLogin/loggedon.html";
+}
+
+</script>
+<body>
+
+<br><br>
+<form action="http://localhost/Homepage/add.php" method="POST" enctype="multipart/form-data">
+<center>
+<button class= "bi" onclick="aaa(); return false" > Add a Hotel Website into the Database </button>
+<table>
+<tr>
+<td>Title</td> <td><input type="textbox" id="jk" name="zz" required></td>
+</tr>
+
+<tr>
+<td>Description</td>  <td><input type="textarea" id="jh" name="xx" required></td>
+</tr>
+
+<tr>
+<td>Link </td> <td><input type="textarea" id="jh" name="bb" required></td>
+</tr>
+
+<tr>
+<td>Address</td> <td><input type="textarea" id="jh" name="mm" required></td>
+</tr>
+
+<tr>
+<td>Map</td> <td><input type="textarea" id="jh" name="ss" required></td>
+</tr>
+
+<tr>
+<td>Zipcode</td> <td><input type="textarea" id="jh" name="dn" required></td>
+</tr>
+
+<tr>
+<td>City</td> <td><input type="textarea" id="jh" name="vv" placeholder="City, State, USA" required></td>
+</tr>
+
+<tr>
+<td>Check-In Availability</td> <td><input type="date" id="jh" name="ci" placeholder= "mm/dd/yyyy" required></td>
+</tr>
+
+<tr>
+<td>Check-Out Availability</td> <td><input type="date" id="jh" name="co" placeholder= "mm/dd/yyyy" required></td>
+</tr>
+
+<tr>
+<td>Adults</td> <td><input type="number" id="jh" name="ad" required></td>
+</tr>
+
+<tr>
+<td>Children</td> <td><input type="number" id="jh" name="ch" required></td>
+
+<tr>
+<td>Image</td> <td><input type="file" id="jh" name="img" required></td>
+</tr>
+
+</table>
+
+<input id="ds" type="submit" value="Submit">
+<input id="di" type="reset"  value="Reset">
+</center>
+</body>
+
+</html>

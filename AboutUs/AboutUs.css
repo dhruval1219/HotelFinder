@@ -1,0 +1,98 @@
+#d{
+    box-sizing: border-box;
+    resize: none;
+    width: 330px;
+    height: 255px;
+    position: relative;
+    left: 135px;
+    bottom: 250px;
+    background-color: #2d2c2cc4;
+    border-style: hidden;
+    border-radius: 80px;
+}
+
+
+.BioImage{
+    position: relative;
+    right: 155px;
+    top: 25.5px;
+}
+
+#Name{
+    font-size: smaller;
+}
+
+#shortBio{
+    padding-top: 0px;
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    line-height: 150%;
+    font-size: smaller;
+}
+
+div{
+  border: 0px;
+}
+/*
+#check{
+  display: none;
+}
+
+*{
+  list-style: none;
+}
+
+.sidebar{
+  text-align: right;
+  right: -250px;
+  width: 250px;
+  position: fixed;
+  height: 100%;
+  background: #2d2c2cc4;
+  color: white;
+  transition: all .5s ease;
+  margin-top: 11px;
+}
+
+.sidebar header{
+  padding-top: 10px;
+  text-decoration: underline;
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 75px;
+  user-select: none;
+
+}
+
+.sidebar ul{
+  margin-top: 20px;
+  text-align: center;
+  display: block;
+  line-height: 70px;
+  font-size: 18px;
+  color: white;
+  box-sizing: border-box;
+  transition: .5s;
+  padding-right: 25px;
+  padding-top: 20px;
+}
+
+ul li:hover{
+  padding-right: 50px;
+}
+
+#check:checked ~ .sidebar{
+  right: 0;
+}
+
+#check:checked ~ label #btn{
+  right: 0px;
+  opacity: 0;
+  pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+  right: 250px;
+} */

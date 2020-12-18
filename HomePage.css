@@ -1,0 +1,193 @@
+.navigationBar{
+  background-image: url('patrick-robert-doyle-ah8zkxqfita-unsplash@1x.png');
+  opacity: 0.7;
+  margin: -7px;
+  padding: 7.5px;
+  border-bottom: white solid thin;
+}
+
+.topBar{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.barLogo{
+  width: 35%;
+}
+
+.barLogin{
+  width: 35%;
+  text-align: right;
+}
+
+a{
+  color: white;
+  text-decoration: none;
+}
+
+.barHome, .barAboutUs{
+  width: 10%;
+  color: white;
+  text-align: center;
+}
+
+.barContact{
+  width: 10%;
+  color: white;
+  text-align: center;
+  border-left: solid 1px;
+  border-right: solid 1px;
+}
+
+.barHome:hover, .barAboutUs:hover, .barContact:hover{
+  text-decoration: underline;
+}
+
+.destinationSearch{
+  border-style: hidden;
+  background: #b4b4b4d8;
+  width: 71.3%;
+  border-top-left-radius: 25px;
+  border-bottom-left-radius: 25px;
+  margin-bottom: 5px;
+  padding: 13px;
+  position: relative;
+  right: -2px;
+}
+
+.useMyLocation{
+  border: none;
+  position: relative;
+  background: #b4b4b4d8;
+  padding-left: 6px;
+  padding-right: 16px;
+  padding-top: 6px;
+  padding-bottom: 4px;
+  border-top-right-radius: 25px;
+  border-bottom-right-radius: 25px;
+  left: -2px;
+  bottom: -9px;
+}
+
+.checkIn, .adults{
+  border-style: hidden;
+  border-radius: 25px;
+  background: #b4b4b4d8;
+  width: 35%;
+  padding: 12px;
+  margin: 5px;
+}
+
+.checkOut, .children{
+  border-style: hidden;
+  border-radius: 25px;
+  background: #b4b4b4d8;
+  width: 35%;
+  padding: 12px;
+  margin: 5px;
+  margin-left: 0px;
+}
+
+.searchButton{
+  border: none;
+  padding: 0;
+  background: none;
+  position: relative;
+  transition: transform .2s; /* Animation */
+}
+
+.searchButton:hover {
+  transform: scale(1.2);
+}
+
+#b{
+  color: white;
+}
+
+#b::placeholder{
+  color: white;
+}
+
+#autofill{
+  color: white;
+}
+
+#autofill::placeholder{
+  color: white;
+}
+
+#c{
+  box-sizing: border-box;
+  resize: none;
+  width: 600px;
+  height: 280px;
+  background-color: #2d2c2cc4;
+  border-style: hidden;
+  border-radius: 40px;
+}
+
+
+#check{
+display: none;
+}
+
+*{
+list-style: none;
+}
+
+.sidebar{
+text-align: right;
+right: -250px;
+width: 250px;
+position: fixed;
+height: 100%;
+background: #2d2c2cc4;
+color: white;
+transition: all .5s ease;
+margin-top: 11px;
+}
+
+.sidebar header{
+padding-top: 10px;
+text-decoration: underline;
+font-size: 22px;
+color: white;
+text-align: center;
+line-height: 75px;
+user-select: none;
+
+}
+
+.sidebar ul{
+margin-top: 20px;
+text-align: center;
+display: block;
+line-height: 70px;
+font-size: 18px;
+color: white;
+box-sizing: border-box;
+transition: .5s;
+padding-right: 25px;
+padding-top: 20px;
+}
+
+ul li:hover{
+padding-right: 50px;
+}
+
+
+
+#check:checked ~ .sidebar{
+right: 0;
+}
+
+#check:checked ~ label #btn{
+right: 0px;
+opacity: 0;
+pointer-events: none;
+}
+
+#check:checked ~ label #cancel{
+right: 250px;
+}
